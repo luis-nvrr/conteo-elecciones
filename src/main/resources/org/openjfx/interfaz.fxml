@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="632.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.InterfazController">
+   <children>
+      <Label layoutX="342.0" layoutY="167.0" text="Seccion:" textAlignment="CENTER">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="212.0" text="Circuito:" textAlignment="CENTER">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="358.0" layoutY="212.0" text="Mesa:" textAlignment="CENTER">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="19.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbMesas" layoutX="415.0" layoutY="210.0" onAction="#totalMesa" prefHeight="28.0" prefWidth="184.0" />
+      <ComboBox fx:id="cmbSecciones" layoutX="415.0" layoutY="165.0" onAction="#filtrarCircuitos" prefHeight="28.0" prefWidth="184.0" />
+      <ComboBox fx:id="cmbCircuitos" layoutX="134.0" layoutY="210.0" onAction="#filtrarMesas" prefHeight="28.0" prefWidth="184.0" />
+      <ComboBox fx:id="cmbDistritos" layoutX="134.0" layoutY="165.0" onAction="#filtrarSecciones" prefHeight="28.0" prefWidth="184.0" />
+      <Label layoutX="41.0" layoutY="263.0" text="Resultados">
+         <font>
+            <Font name="Berlin Sans FB" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="105.0" prefHeight="55.0" prefWidth="441.0" text="Escrutinio Elecciones ARG">
+         <font>
+            <Font name="Berlin Sans FB" size="39.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="167.0" text="Distrito:" textAlignment="CENTER">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblRuta" layoutX="128.0" layoutY="88.0" prefHeight="18.0" prefWidth="353.0">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="60.0" layoutY="85.0" text="Ruta:">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="19.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnCargar" layoutX="501.0" layoutY="119.0" mnemonicParsing="false" onAction="#btnCargar" prefHeight="32.0" prefWidth="91.0" text="Cargar" />
+      <Button fx:id="btnRuta" layoutX="501.0" layoutY="81.0" mnemonicParsing="false" onAction="#buscarRuta" prefHeight="32.0" prefWidth="91.0" text="Archivo" />
+      <TableView fx:id="tblTotales" layoutX="41.0" layoutY="307.0" prefHeight="285.0" prefWidth="555.0" />
+   </children>
+</AnchorPane>
